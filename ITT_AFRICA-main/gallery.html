@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Gallery - ITT-Africa</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/logo.jpeg" alt="ITT AFRICA Logo">
+          <span>ITT-Africa</span>
+        </a>
+      </h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+        <button class="menu-toggle">☰</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- Gallery Hero -->
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/IMG-20260713-WA0008.jpg') no-repeat center center/cover; min-height: 40vh; height: auto; padding: 4rem 2rem;">
+      <div class="hero-text">
+        <h2>Our Campus Gallery</h2>
+        <p class="lead" style="font-size: 1.4rem; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase;">A Visual Journey of ITT-Africa</p>
+      </div>
+    </section>
+
+    <!-- Filters Section -->
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="health">Health Sciences</button>
+      <button class="filter-btn" data-filter="tech">Technology</button>
+      <button class="filter-btn" data-filter="entrepreneurship">Entrepreneurship & Innovation</button>
+      <button class="filter-btn" data-filter="campus">Campus & Community</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <section style="max-width: 1200px; margin: 0 auto 5rem auto; padding: 0 1rem;">
+      <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;">
+        
+        <div class="gallery-item-wrapper" data-category="health" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0001.jpg" alt="Health Sciences Practical Session">
+            <div class="gallery-caption">Health Sciences Practical Session</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="tech" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0002.jpg" alt="Computer & Tech Training Lab">
+            <div class="gallery-caption">Computer & Tech Training Lab</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="tech" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0003.jpg" alt="Competency-Based Learning Exercises">
+            <div class="gallery-caption">Competency-Based Learning Exercises</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="health" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0004.jpg" alt="Practical Nursing and Clinical Demo">
+            <div class="gallery-caption">Practical Nursing and Clinical Demo</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="campus" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0005.jpg" alt="Students Collaborative Discussion">
+            <div class="gallery-caption">Students Collaborative Discussion</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="entrepreneurship" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0006.jpg" alt="Entrepreneurship Training Workshop">
+            <div class="gallery-caption">Entrepreneurship Training Workshop</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="entrepreneurship" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0007.jpg" alt="Innovation and Problem Solving Tasks">
+            <div class="gallery-caption">Innovation and Problem Solving Tasks</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="campus" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0008.jpg" alt="ITT-Africa Main Campus Life">
+            <div class="gallery-caption">ITT-Africa Main Campus Life</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="campus" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0009.jpg" alt="Vocational Hands-On Exercises">
+            <div class="gallery-caption">Vocational Hands-On Exercises</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="health" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0011.jpg" alt="Health & Sanitation Demonstrations">
+            <div class="gallery-caption">Health & Sanitation Demonstrations</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="tech" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0012.jpg" alt="Digital Technology Workshop">
+            <div class="gallery-caption">Digital Technology Workshop</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="campus" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0013.jpg" alt="Empowering Vulnerable Youth Programs">
+            <div class="gallery-caption">Empowering Vulnerable Youth Programs</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="health" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0014.jpg" alt="Professional Nursing Instruction">
+            <div class="gallery-caption">Professional Nursing Instruction</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="tech" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0015.jpg" alt="Creative Designing & Technology Lab">
+            <div class="gallery-caption">Creative Designing & Technology Lab</div>
+          </div>
+        </div>
+
+        <div class="gallery-item-wrapper" data-category="entrepreneurship" style="transition: opacity 0.4s ease, transform 0.4s ease; opacity: 1; transform: scale(1);">
+          <div class="gallery-item">
+            <img src="images/IMG-20260713-WA0016.jpg" alt="Leadership Coaching and Mentorship">
+            <div class="gallery-caption">Leadership Coaching and Mentorship</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- JavaScript for Interactive Gallery Filtering -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item-wrapper');
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+              if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                item.style.display = 'block';
+                // Trigger reflow to enable transition
+                item.offsetHeight;
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+              } else {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                  if (item.style.opacity === '0') {
+                    item.style.display = 'none';
+                  }
+                }, 400);
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-main-flex">
+        <div class="footer-best">
+          <h4>What We Do Best</h4>
+          <ul>
+            <li>Vocational & Technical Training</li>
+            <li>Industry-Ready Skills</li>
+            <li>Career Guidance & Support</li>
+            <li>Flexible Learning Options</li>
+            <li>Affordable Fees</li>
+          </ul>
+        </div>
+        <div class="footer-quick">
+          <h4>Quick Access</h4>
+          <ul>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="footer-social-icons">
+            <p><strong>Email:</strong> info@ittafrica.com</p>
+            <p><strong>Phone:</strong> +256 781 190 101</p>
+            <div class="footer-social-icons-grid">
+              <a href="#" title="Facebook"><img src="assets/facebook.svg" alt="Facebook" /></a>
+              <a href="#" title="X"><img src="assets/square-x-twitter-brands-solid-full.svg" alt="X" /></a>
+              <a href="#" title="LinkedIn"><img src="assets/linkedin.svg" alt="LinkedIn" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Subscribe to Our Newsletter</h4>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ITT-Africa School of Health Science, Entrepreneurship, Technology and Innovation. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
