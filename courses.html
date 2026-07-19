@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - ITT-Africa</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="images/logo.jpeg" alt="ITT AFRICA Logo">
+          <span>ITT-Africa</span>
+        </a>
+      </h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html" class="active">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <button class="menu-toggle">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div>
+        <h3>Available Courses</h3>
+        <p>Explore our diverse range of courses designed to equip you with practical skills for the modern workforce.</p>
+      </div>
+
+
+    <div class="search-filter">
+      <input type="text" id="searchBar" placeholder="Search courses...">
+      <label for="categoryFilter">Filter by category:</label>
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="tech">Technology</option>
+        <option value="business">Health Science</option>
+        <option value="design">Design</option>
+      </select>
+
+      <hr>
+    </div>
+    <h3>Information Technology</h3>
+    <div class="grid" id="coursesGrid">
+      <article class="card" data-category="tech" data-keywords="information communication technology(ict)">
+        <div>
+          <h3>Introduction to Information Technology</h3>
+        <p>Gain a strong foundation in IT by exploring essential topics such as computer hardware, software, data management, and digital communication. Perfect for beginners and professionals looking to refresh their knowledge.</p>
+        </div>
+      </article>
+      <article class="card" data-category="business" data-keywords="business administration management">
+        <h3>Web Development</h3>
+        <p>Learn how to build responsive, dynamic websites and web applications using HTML, CSS, JavaScript, and modern frameworks. This hands-on course empowers you to turn your ideas into fully functional digital solutions.</p>
+      </article>
+
+      <article class="card" data-category="business" data-keywords="science and healthskills">
+        <h3>Systems Analysis and Design</h3>
+        <p>Master the art of analyzing business problems and designing effective IT solutions. This course covers essential tools and techniques like process modeling, data flow diagrams, and system development life cycles (SDLC).</p>
+      </article>
+      <article class="card" data-category="design" data-keywords="graphic design adobe photoshop illustrator">
+        <h3>Cloud Computing</h3>
+        <p>Stay ahead in the tech industry with our practical training in cloud services such as AWS, Microsoft Azure, and Google Cloud. Learn about cloud architecture, deployment models, and real-world applications.</p>
+    </div>
+    <hr>
+
+    <h3>Business Administration</h3>
+    <div class="grid" id="coursesGrid">
+      <article class="card" data-category="tech" data-keywords="information communication technology(ict)">
+        <div>
+          <h3>Principles of Business Management</h3>
+        <p>Understand the core functions of management, including planning, organizing, leading, and controlling. Ideal for aspiring managers and team leaders.</p>
+        </div>
+      </article>
+      <article class="card" data-category="business" data-keywords="business administration management">
+        <h3>Financial Management</h3>
+        <p>Learn how to analyze financial statements, manage budgets, and make sound financial decisions that drive business success.</p>
+      </article>
+
+      <article class="card" data-category="business" data-keywords="science and healthskills">
+        <h3>Marketing and Sales Strategies</h3>
+        <p>Gain practical insights into market research, branding, consumer behavior, and sales tactics to boost customer engagement and revenue.</p>
+      </article>
+      <article class="card" data-category="design" data-keywords="graphic design adobe photoshop illustrator">
+        <h3>Human Resource Management</h3>
+        <p>Master the essentials of recruitment, employee relations, performance management, and labor laws to build strong, productive teams..</p>
+      </article>
+    </div>
+    <hr>
+     
+    <h3>Health Science</h3>
+    <div class="grid" id="coursesGrid">
+      <article class="card" data-category="tech" data-keywords="information communication technology(ict)">
+        <div>
+          <h3>Information Technology</h3>
+        <p>Typing, book binding, website design and hosting,call center operator,desktop publishing and photography</p>
+        </div>
+      </article>
+      <article class="card" data-category="business" data-keywords="business administration management">
+        <h3>Business Administration</h3>
+        <p>Learn essential business skills including management, marketing, and entrepreneurship.</p>
+      </article>
+
+      <article class="card" data-category="business" data-keywords="science and healthskills">
+        <h3>Health Science</h3>
+        <p>Gain skills to treat and monitor the health of a patient.</p>
+      </article>
+      <article class="card" data-category="design" data-keywords="graphic design adobe photoshop illustrator">
+        <h3>Design</h3>
+        <p>Master visual communication using industry-standard design tools.</p>
+    </div>
+    <hr>
+
+    <h3>Design</h3>
+    <div class="grid" id="coursesGrid">
+      <article class="card" data-category="design" data-keywords="graphic design adobe photoshop illustrator">
+        <h3>Graphic Design</h3>
+        <p>Learn to create stunning visuals using Adobe Photoshop and Illustrator.</p>
+      </article>
+      <article class="card" data-category="design" data-keywords="web design user experience">
+        <h3>Web Design</h3>
+        <p>Master the art of designing user-friendly websites.</p>
+      </article>
+      <article class="card" data-category="design" data-keywords="ux/ui design prototyping">
+        <h3>UX/UI Design</h3>
+        <p>Understand user needs and create intuitive interfaces.</p>
+      </article>
+    </div>
+    <hr>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-main-flex">
+        <div class="footer-best">
+          <h4>What We Do Best</h4>
+          <ul>
+            <li>Vocational & Technical Training</li>
+            <li>Industry-Ready Skills</li>
+            <li>Career Guidance & Support</li>
+            <li>Flexible Learning Options</li>
+            <li>Affordable Fees</li>
+          </ul>
+        </div>
+        <div class="footer-quick">
+          <h4>Quick Access</h4>
+          <ul>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="footer-social-icons">
+            <p><strong>Email:</strong> info@ittafrica.com</p>
+            <p><strong>Phone:</strong> +256 700 000 000</p>
+            <div class="footer-social-icons-grid">
+              <a href="#" title="Facebook"><img src="assets/facebook.svg" alt="Facebook" /></a>
+              <a href="#" title="X"><img src="assets/square-x-twitter-brands-solid-full.svg" alt="X" /></a>
+              <a href="#" title="LinkedIn"><img src="assets/linkedin.svg" alt="LinkedIn" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Subscribe to Our Newsletter</h4>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ITT-Africa School of Health Science, Entrepreneurship, Technology and Innovation. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
