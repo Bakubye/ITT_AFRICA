@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Courses - ITT-Africa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
   <script src="script.js" defer></script>
@@ -30,111 +31,707 @@
     </div>
   </header>
 
-  <main class="page">
-    <div>
-        <h3>Available Courses</h3>
-        <p>Explore our diverse range of courses designed to equip you with practical skills for the modern workforce.</p>
+  <main class="page" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <h2 style="font-size: 2.5rem; color: var(--primary); margin-top: 0; margin-bottom: 0.5rem; font-family: var(--font-title);">Available Academic Programs</h2>
+      <p style="color: var(--text-light); font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Explore our diverse range of vocational and healthcare programs designed to equip you with practical skills for a successful career.</p>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div class="search-filter" style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: center; background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 3rem; border: 1px solid rgba(0,74,173,0.05);">
+      <div style="flex: 1; min-width: 250px; position: relative;">
+        <input type="text" id="searchBar" placeholder="Search programs or modules..." style="width: 100%; padding: 0.75rem 1rem; border: 1.5px solid var(--gray-mid); border-radius: 8px; font-size: 0.95rem; box-sizing: border-box;">
       </div>
-
-
-    <div class="search-filter">
-      <input type="text" id="searchBar" placeholder="Search courses...">
-      <label for="categoryFilter">Filter by category:</label>
-      <select id="categoryFilter">
-        <option value="all">All Categories</option>
-        <option value="tech">Technology</option>
-        <option value="business">Health Science</option>
-        <option value="design">Design</option>
-      </select>
-
-      <hr>
+      <div style="display: flex; align-items: center; gap: 0.8rem; min-width: 250px;">
+        <label for="categoryFilter" style="font-weight: bold; font-size: 0.95rem; color: var(--dark); white-space: nowrap;">Filter by department:</label>
+        <select id="categoryFilter" style="width: 100%; padding: 0.75rem 1rem; border: 1.5px solid var(--gray-mid); border-radius: 8px; font-size: 0.95rem; background-color: #fff; cursor: pointer;">
+          <option value="all">All Departments</option>
+          <option value="tech">Technology</option>
+          <option value="business">Business Administration</option>
+          <option value="health">Health Science</option>
+          <option value="design">Design</option>
+        </select>
+      </div>
     </div>
-    <h3>Information Technology</h3>
-    <div class="grid" id="coursesGrid">
-      <article class="card" data-category="tech" data-keywords="information communication technology(ict)">
-        <div>
-          <h3>Introduction to Information Technology</h3>
-        <p>Gain a strong foundation in IT by exploring essential topics such as computer hardware, software, data management, and digital communication. Perfect for beginners and professionals looking to refresh their knowledge.</p>
+
+    <!-- Health Science Section -->
+    <section class="course-section" style="margin-bottom: 4rem;">
+      <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 2rem; border-left: 5px solid var(--accent); padding-left: 0.8rem; text-align: left;">Health Science</h3>
+      <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-top: 0;">
+        
+        <!-- Certificate in Nursing -->
+        <div class="program-card-wrapper" data-category="health">
+          <div class="program-card">
+            <div class="program-header header-health">
+              <div class="program-icon"><i class="fas fa-user-nurse"></i></div>
+              <div class="program-title">
+                <h3>Certificate in Nursing</h3>
+                <span class="program-duration">2½ Years</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Our Certificate in Nursing program provides comprehensive nursing education combining theoretical knowledge with practical clinical experience. Students are trained to provide quality nursing care in various healthcare settings.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level passes in English, Mathematics, Biology, Chemistry, and Physics</li>
+                <li>Passes must be obtained at the same sitting</li>
+                <li>A' Level results are an added advantage</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Anatomy and Physiology Foundations</li>
+                <li>Fundamentals of Nursing Care</li>
+                <li>Medical-Surgical & Pediatric Nursing</li>
+                <li>Pharmacology & Community Health Care</li>
+              </ul>
+              
+              <h4>Clinical Practicum</h4>
+              <p>Hands-on clinical training at partner clinics and regional referral hospitals, supervised by clinical tutors and mentors.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </article>
-      <article class="card" data-category="business" data-keywords="business administration management">
-        <h3>Web Development</h3>
-        <p>Learn how to build responsive, dynamic websites and web applications using HTML, CSS, JavaScript, and modern frameworks. This hands-on course empowers you to turn your ideas into fully functional digital solutions.</p>
-      </article>
 
-      <article class="card" data-category="business" data-keywords="science and healthskills">
-        <h3>Systems Analysis and Design</h3>
-        <p>Master the art of analyzing business problems and designing effective IT solutions. This course covers essential tools and techniques like process modeling, data flow diagrams, and system development life cycles (SDLC).</p>
-      </article>
-      <article class="card" data-category="design" data-keywords="graphic design adobe photoshop illustrator">
-        <h3>Cloud Computing</h3>
-        <p>Stay ahead in the tech industry with our practical training in cloud services such as AWS, Microsoft Azure, and Google Cloud. Learn about cloud architecture, deployment models, and real-world applications.</p>
-    </div>
-    <hr>
-
-    <h3>Business Administration</h3>
-    <div class="grid" id="coursesGrid">
-      <article class="card" data-category="tech" data-keywords="information communication technology(ict)">
-        <div>
-          <h3>Principles of Business Management</h3>
-        <p>Understand the core functions of management, including planning, organizing, leading, and controlling. Ideal for aspiring managers and team leaders.</p>
+        <!-- Certificate in Midwifery -->
+        <div class="program-card-wrapper" data-category="health">
+          <div class="program-card">
+            <div class="program-header header-health">
+              <div class="program-icon"><i class="fas fa-baby"></i></div>
+              <div class="program-title">
+                <h3>Certificate in Midwifery</h3>
+                <span class="program-duration">2½ Years</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Specializes in maternal and child health, preparing students to provide comprehensive midwifery care including antenatal, intrapartum, and postnatal services.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level passes in English, Mathematics, Biology, Chemistry, and Physics</li>
+                <li>Passes must be obtained at the same sitting</li>
+                <li>Must be compassionate with strong communication skills</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Midwifery Foundations & Practice</li>
+                <li>Antenatal & Intrapartum Care Methods</li>
+                <li>Postnatal & Newborn Clinical Studies</li>
+                <li>Family Planning & Reproductive Health</li>
+              </ul>
+              
+              <h4>Clinical Practicum</h4>
+              <p>Practical clinical rotations in maternity wards and delivery rooms, obtaining extensive experience in live delivery situations.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </article>
-      <article class="card" data-category="business" data-keywords="business administration management">
-        <h3>Financial Management</h3>
-        <p>Learn how to analyze financial statements, manage budgets, and make sound financial decisions that drive business success.</p>
-      </article>
 
-      <article class="card" data-category="business" data-keywords="science and healthskills">
-        <h3>Marketing and Sales Strategies</h3>
-        <p>Gain practical insights into market research, branding, consumer behavior, and sales tactics to boost customer engagement and revenue.</p>
-      </article>
-      <article class="card" data-category="design" data-keywords="graphic design adobe photoshop illustrator">
-        <h3>Human Resource Management</h3>
-        <p>Master the essentials of recruitment, employee relations, performance management, and labor laws to build strong, productive teams..</p>
-      </article>
-    </div>
-    <hr>
-     
-    <h3>Health Science</h3>
-    <div class="grid" id="coursesGrid">
-      <article class="card" data-category="tech" data-keywords="information communication technology(ict)">
-        <div>
-          <h3>Information Technology</h3>
-        <p>Typing, book binding, website design and hosting,call center operator,desktop publishing and photography</p>
+        <!-- Healthcare Assistant -->
+        <div class="program-card-wrapper" data-category="health">
+          <div class="program-card">
+            <div class="program-header header-health">
+              <div class="program-icon"><i class="fas fa-hand-holding-medical"></i></div>
+              <div class="program-title">
+                <h3>Healthcare Assistant</h3>
+                <span class="program-duration">1½ Years</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Designed to train primary healthcare supporters to serve communities, assisting patients with daily healthcare routines, sanitation, and nutritional support.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate with passes in Science subjects</li>
+                <li>Interest in community health and patient care</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>First Aid & Emergency Response Procedures</li>
+                <li>Basic Patient Hygiene & Nursing Aid</li>
+                <li>Nutrition, Sanitation, & Preventive Health</li>
+                <li>Home-Based Care & Geriatric Health Care</li>
+              </ul>
+              
+              <h4>Clinical Practicum</h4>
+              <p>Fieldwork and practical rotations in community health centers and outpatient clinics.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </article>
-      <article class="card" data-category="business" data-keywords="business administration management">
-        <h3>Business Administration</h3>
-        <p>Learn essential business skills including management, marketing, and entrepreneurship.</p>
-      </article>
 
-      <article class="card" data-category="business" data-keywords="science and healthskills">
-        <h3>Health Science</h3>
-        <p>Gain skills to treat and monitor the health of a patient.</p>
-      </article>
-      <article class="card" data-category="design" data-keywords="graphic design adobe photoshop illustrator">
-        <h3>Design</h3>
-        <p>Master visual communication using industry-standard design tools.</p>
-    </div>
-    <hr>
+        <!-- First Aid and BLS -->
+        <div class="program-card-wrapper" data-category="health">
+          <div class="program-card">
+            <div class="program-header header-health">
+              <div class="program-icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="program-title">
+                <h3>First Aid & BLS</h3>
+                <span class="program-duration">3 Months</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>A short practical certificate program providing crucial life-saving skills. Learn to manage fractures, bleeding, cardiac arrests, and other emergency situations.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>Open enrollment (suitable for corporate staff, drivers, teachers, and general public)</li>
+                <li>Ability to read and write English</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Cardiopulmonary Resuscitation (CPR) & AED usage</li>
+                <li>Choking management & airway blockages</li>
+                <li>Bleeding control & shock management</li>
+                <li>Emergency trauma response & transport</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Graduates receive a First Aid Certification, enhancing employment prospects in workplace safety, schools, sports centers, and community outreach.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <h3>Design</h3>
-    <div class="grid" id="coursesGrid">
-      <article class="card" data-category="design" data-keywords="graphic design adobe photoshop illustrator">
-        <h3>Graphic Design</h3>
-        <p>Learn to create stunning visuals using Adobe Photoshop and Illustrator.</p>
-      </article>
-      <article class="card" data-category="design" data-keywords="web design user experience">
-        <h3>Web Design</h3>
-        <p>Master the art of designing user-friendly websites.</p>
-      </article>
-      <article class="card" data-category="design" data-keywords="ux/ui design prototyping">
-        <h3>UX/UI Design</h3>
-        <p>Understand user needs and create intuitive interfaces.</p>
-      </article>
-    </div>
-    <hr>
+      </div>
+      <hr style="border: 0; height: 1px; background: var(--gray-mid); margin: 3rem 0;">
+    </section>
+
+    <!-- Information Technology Section -->
+    <section class="course-section" style="margin-bottom: 4rem;">
+      <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 2rem; border-left: 5px solid var(--accent); padding-left: 0.8rem; text-align: left;">Information Technology</h3>
+      <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-top: 0;">
+        
+        <!-- Intro to IT -->
+        <div class="program-card-wrapper" data-category="tech">
+          <div class="program-card">
+            <div class="program-header header-tech">
+              <div class="program-icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="program-title">
+                <h3>Introduction to IT</h3>
+                <span class="program-duration">6 Months</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Gain a strong foundation in IT by exploring essential topics such as computer hardware, software, data management, and digital communication. Perfect for beginners and professionals looking to refresh their knowledge.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate or equivalent (with at least a pass in English)</li>
+                <li>Basic computer literacy is an added advantage</li>
+                <li>Interest in digital skills and technology</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Computer Hardware & Operating Systems</li>
+                <li>Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+                <li>Internet Fundamentals & Email Communication</li>
+                <li>Introduction to Databases & Data Security</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Graduates can pursue entry-level positions such as office assistants, data entry clerks, customer service representatives, or continue to advanced IT studies.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="program-card-wrapper" data-category="tech">
+          <div class="program-card">
+            <div class="program-header header-tech">
+              <div class="program-icon"><i class="fas fa-code"></i></div>
+              <div class="program-title">
+                <h3>Web Development</h3>
+                <span class="program-duration">1 Year</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Learn how to build responsive, dynamic websites and web applications using HTML, CSS, JavaScript, and modern frameworks. This hands-on course empowers you to turn your ideas into fully functional digital solutions.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate or equivalent with a pass in Mathematics</li>
+                <li>Completion of basic computer literacy or Introduction to IT</li>
+                <li>Own laptop is highly recommended for practical practice</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>HTML5 & CSS3 Responsive Web Design</li>
+                <li>JavaScript Programming Fundamentals</li>
+                <li>Version Control with Git & GitHub</li>
+                <li>Introduction to Backend Development & APIs</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Graduates can work as junior front-end developers, web designers, freelance web specialists, or start their own web design consulting business.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Systems Analysis -->
+        <div class="program-card-wrapper" data-category="tech">
+          <div class="program-card">
+            <div class="program-header header-tech">
+              <div class="program-icon"><i class="fas fa-project-diagram"></i></div>
+              <div class="program-title">
+                <h3>Systems Analysis & Design</h3>
+                <span class="program-duration">1 Year</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Master the art of analyzing business problems and designing effective IT solutions. This course covers essential tools and techniques like process modeling, data flow diagrams, and system development life cycles (SDLC).</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate or equivalent with at least 5 passes</li>
+                <li>Basic IT background or logical problem-solving skills</li>
+                <li>Attach O' Level result slip or equivalent certificate</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Systems Development Life Cycle (SDLC)</li>
+                <li>Requirements Elicitation & Fact-Finding</li>
+                <li>Process & Data Modeling (DFDs, ERDs)</li>
+                <li>System Prototyping & User Interface Design</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Graduates are prepared for careers as junior systems analysts, IT project coordinators, business analysts, or database coordinators.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloud Computing -->
+        <div class="program-card-wrapper" data-category="tech">
+          <div class="program-card">
+            <div class="program-header header-tech">
+              <div class="program-icon"><i class="fas fa-cloud"></i></div>
+              <div class="program-title">
+                <h3>Cloud Computing</h3>
+                <span class="program-duration">6 Months</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Stay ahead in the tech industry with our practical training in cloud services such as AWS, Microsoft Azure, and Google Cloud. Learn about cloud architecture, deployment models, and real-world applications.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate or equivalent</li>
+                <li>Basic programming or networking concepts are beneficial</li>
+                <li>Comfortable using web browsers and command line interfaces</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Cloud Concepts & Security Best Practices</li>
+                <li>Virtual Servers & Cloud Storage Deployment</li>
+                <li>Introduction to Databases in the Cloud</li>
+                <li>AWS / Google Cloud Platform Hands-on Labs</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Graduates can work as junior cloud support associates, systems operations staff, junior DevOps assistants, or cloud consultants.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <hr style="border: 0; height: 1px; background: var(--gray-mid); margin: 3rem 0;">
+    </section>
+
+    <!-- Business Administration Section -->
+    <section class="course-section" style="margin-bottom: 4rem;">
+      <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 2rem; border-left: 5px solid var(--accent); padding-left: 0.8rem; text-align: left;">Business Administration</h3>
+      <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-top: 0;">
+        
+        <!-- Principles of Business Management -->
+        <div class="program-card-wrapper" data-category="business">
+          <div class="program-card">
+            <div class="program-header header-business">
+              <div class="program-icon"><i class="fas fa-briefcase"></i></div>
+              <div class="program-title">
+                <h3>Principles of Management</h3>
+                <span class="program-duration">1 Year</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Understand the core functions of management, including planning, organizing, leading, and controlling. Ideal for aspiring managers and team leaders.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate or equivalent (with a pass in English)</li>
+                <li>Desire to build business administration and management skills</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Introduction to Business Systems</li>
+                <li>Functions of Management (Planning, Organizing, Leading)</li>
+                <li>Business Communication & Report Writing</li>
+                <li>Business Ethics & Corporate Responsibility</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Prepares students for administrative assistant, team lead, assistant manager, or office coordinator positions in various sectors.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Financial Management -->
+        <div class="program-card-wrapper" data-category="business">
+          <div class="program-card">
+            <div class="program-header header-business">
+              <div class="program-icon"><i class="fas fa-calculator"></i></div>
+              <div class="program-title">
+                <h3>Financial Management</h3>
+                <span class="program-duration">1 Year</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Learn how to analyze financial statements, manage budgets, and make sound financial decisions that drive business success.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate with a pass in Mathematics</li>
+                <li>Basic numeracy and logical capabilities</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Basic Accounting Principles & Bookkeeping</li>
+                <li>Financial Statements & Analysis</li>
+                <li>Budgeting & Cost Control Procedures</li>
+                <li>Working Capital Management & Cash Flow</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Graduates can seek employment as accounts clerks, billing assistants, finance assistants, or manage budgets for SMEs.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marketing and Sales -->
+        <div class="program-card-wrapper" data-category="business">
+          <div class="program-card">
+            <div class="program-header header-business">
+              <div class="program-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="program-title">
+                <h3>Marketing & Sales</h3>
+                <span class="program-duration">6 Months</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Gain practical insights into market research, branding, consumer behavior, and sales tactics to boost customer engagement and revenue.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate or equivalent</li>
+                <li>Strong communication and interpersonal skills</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Marketing Mix (4 Ps) & Brand Strategy</li>
+                <li>Consumer Behavior & Market Segmentation</li>
+                <li>Sales Techniques & Customer Relations</li>
+                <li>Introduction to Digital & Social Media Marketing</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Prepares students for positions as sales executives, marketing assistants, brand coordinators, or customer relations officers.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HR Management -->
+        <div class="program-card-wrapper" data-category="business">
+          <div class="program-card">
+            <div class="program-header header-business">
+              <div class="program-icon"><i class="fas fa-users"></i></div>
+              <div class="program-title">
+                <h3>Human Resource Mgt</h3>
+                <span class="program-duration">1 Year</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Master the essentials of recruitment, employee relations, performance management, and labor laws to build strong, productive teams.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate or equivalent with at least 5 passes</li>
+                <li>Desire to pursue organizational leadership and personnel management</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Recruitment, Selection, & Induction</li>
+                <li>Performance Management & Appraisal Systems</li>
+                <li>Employee Welfare, Relations, & Conflict Resolution</li>
+                <li>Introduction to Uganda Labor Laws & Regulations</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Graduates can work as HR assistants, recruitment coordinators, training coordinators, or office administrative support.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <hr style="border: 0; height: 1px; background: var(--gray-mid); margin: 3rem 0;">
+    </section>
+
+
+    <!-- Design Section -->
+    <section class="course-section" style="margin-bottom: 4rem;">
+      <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 2rem; border-left: 5px solid var(--accent); padding-left: 0.8rem; text-align: left;">Design</h3>
+      <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-top: 0;">
+        
+        <!-- Graphic Design -->
+        <div class="program-card-wrapper" data-category="design">
+          <div class="program-card">
+            <div class="program-header header-design">
+              <div class="program-icon"><i class="fas fa-palette"></i></div>
+              <div class="program-title">
+                <h3>Graphic Design</h3>
+                <span class="program-duration">6 Months</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Learn to create stunning visuals and marketing assets using industry-standard design tools like Adobe Photoshop and Illustrator. Ideal for creative minds looking to turn art into a career.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate or equivalent</li>
+                <li>Basic computer operations awareness</li>
+                <li>Creative interest and analytical layout thinking</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Principles of Visual Communication & Color Theory</li>
+                <li>Raster Graphic Editing with Adobe Photoshop</li>
+                <li>Vector Graphic Creation with Adobe Illustrator</li>
+                <li>Typography & Branding Design Projects</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Graduates can work as graphic designers, brand specialists, layout artists, social media content creators, or freelance designers.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Design -->
+        <div class="program-card-wrapper" data-category="design">
+          <div class="program-card">
+            <div class="program-header header-design">
+              <div class="program-icon"><i class="fas fa-drafting-compass"></i></div>
+              <div class="program-title">
+                <h3>Web Design</h3>
+                <span class="program-duration">6 Months</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Master the art of designing user-friendly websites. Learn about grid layouts, color schemes, wireframing, and creating visual mockups that translate into engaging web layouts.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate or equivalent</li>
+                <li>Completion of basic computer literacy or Graphic Design</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>Visual Grid Systems & Page Layouts</li>
+                <li>Design Assets Exporting & Optimization</li>
+                <li>Figma Prototyping & Collaboration</li>
+                <li>HTML/CSS Integration for Web Designers</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Graduates can seek employment as web design specialists, layout assistants, front-end visual designers, or start freelancing.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UX/UI Design -->
+        <div class="program-card-wrapper" data-category="design">
+          <div class="program-card">
+            <div class="program-header header-design">
+              <div class="program-icon"><i class="fas fa-pencil-ruler"></i></div>
+              <div class="program-title">
+                <h3>UX/UI Design</h3>
+                <span class="program-duration">1 Year</span>
+              </div>
+            </div>
+            <div class="program-content">
+              <h4>Program Overview</h4>
+              <p>Understand user needs and create intuitive, high-fidelity interfaces. Focuses on user research, empathy mapping, user flows, and wireframing for web and mobile interfaces.</p>
+              
+              <h4>Entry Requirements</h4>
+              <ul class="requirements-list">
+                <li>O' Level Certificate or equivalent</li>
+                <li>Prior design course completion (e.g. Graphic or Web Design)</li>
+                <li>Analytical mindset and critical problem-solving skills</li>
+              </ul>
+              
+              <h4>Course Content</h4>
+              <ul class="course-content">
+                <li>User Research & Empathy Mapping Methods</li>
+                <li>User Flows, Wireframing, & Prototyping (Figma/Adobe XD)</li>
+                <li>UI Design Patterns & Interaction Design</li>
+                <li>Usability Testing & Feedback Integration</li>
+              </ul>
+              
+              <h4>Career Opportunities</h4>
+              <p>Prepares students for career pathways as junior UX/UI designers, product design interns, usability testers, or product coordinators.</p>
+              
+              <div class="program-actions">
+                <a href="contact.html" class="btn-3d btn-green"><span class="shine"></span>Apply Now</a>
+                <a href="contact.html" class="btn-3d btn-blue btn-3d-sm"><span class="shine"></span>Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- JavaScript for Client-side Search and Filtering -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const searchBar = document.getElementById('searchBar');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const cardWrappers = document.querySelectorAll('.program-card-wrapper');
+        const sections = document.querySelectorAll('.course-section');
+
+        function filterCourses() {
+          const query = searchBar.value.toLowerCase().trim();
+          const selectedCategory = categoryFilter.value;
+
+          sections.forEach(section => {
+            let visibleInSection = 0;
+            const wrappers = section.querySelectorAll('.program-card-wrapper');
+
+            wrappers.forEach(wrapper => {
+              const card = wrapper.querySelector('.program-card');
+              const title = card.querySelector('.program-title h3').textContent.toLowerCase();
+              const overview = card.querySelector('.program-content p').textContent.toLowerCase();
+              const cat = wrapper.getAttribute('data-category');
+
+              // Search matches either title or overview description
+              const matchesSearch = title.includes(query) || overview.includes(query);
+              const matchesCategory = selectedCategory === 'all' || cat === selectedCategory;
+
+              if (matchesSearch && matchesCategory) {
+                wrapper.style.display = 'block';
+                visibleInSection++;
+              } else {
+                wrapper.style.display = 'none';
+              }
+            });
+
+            // Hide/Show the department section title and hr depending on visibility of items inside
+            if (visibleInSection > 0) {
+              section.style.display = 'block';
+            } else {
+              section.style.display = 'none';
+            }
+          });
+        }
+
+        if (searchBar && categoryFilter) {
+          searchBar.addEventListener('input', filterCourses);
+          categoryFilter.addEventListener('change', filterCourses);
+        }
+      });
+    </script>
   </main>
 
   <footer>
@@ -163,7 +760,7 @@
           <h4>Follow Us</h4>
           <div class="footer-social-icons">
             <p><strong>Email:</strong> info@ittafrica.com</p>
-            <p><strong>Phone:</strong> +256 700 000 000</p>
+            <p><strong>Phone:</strong>+256(0)781190101</p>
             <div class="footer-social-icons-grid">
               <a href="#" title="Facebook"><img src="assets/facebook.svg" alt="Facebook" /></a>
               <a href="#" title="X"><img src="assets/square-x-twitter-brands-solid-full.svg" alt="X" /></a>
